@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 90vh;
+  width: 100vw;
+  display: flex;
+  background: rgb(243, 241, 241);
+  flex-direction: column;
+}
+
+h1 {
+  color: rgb(95, 90, 90);
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+div.chat {
+  flex: 1;
+}
+
+div.messages {
+  overflow: auto;
+  font-size: 1.2rem;
+  border: 1px solid rgb(224, 216, 241);
+  border-radius: 12px;
+  margin: 0 2em;
+  padding: 1.5em;
+  background: rgb(230, 223, 247);
+  box-shadow: 8px 8px 22px 1px rgb(151, 97, 212);
+  height: 75%;
+}
+
+div.messages p {
+  display: flex;
+  padding: 0.8rem;
+  border-radius: 25px;
+  position: relative;
+  color: rgb(255, 255, 255);
+  width: 90%;
+}
+
+div.messages p.recived {
+  background: rgb(70, 64, 77);
+}
+
+div.messages p.sended {
+  background: rgb(86, 55, 122);
+}
+
+div.messages p::before {
+  content: "";
+  border-style: solid;
+  border-width: 5px 0 12px 8px;
+  top: 50%;
+  position: absolute;
+  transform: translateX(-150%);
+}
+
+div.messages p.recived::before {
+  border-color: rgb(70, 64, 77);
+}
+
+div.messages p.sended::before {
+  border-color: rgb(86, 55, 122);
+}
+
+form {
+  display: flex;
+  margin: 0 1em;
+  justify-content: center;
+}
+
+form div {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+form div input {
+  flex: 8;
+  border-radius: 8px;
+  border: 1px solid rgb(160, 157, 157);
+  padding: 12px;
+  font-size: 22px;
+  color: rgb(63, 60, 60);
+}
+
+form div input[type="text"]:focus {
+  border: 1px solid rgb(131, 126, 126);
+  outline: 0;
+  color: rgb(63, 60, 60);
+}
+
+form div button {
+  flex: 1;
+  margin-left: 12px;
+  height: 50px;
+  border-radius: 10%;
+  color: #fff;
+  font-size: 1.2em;
+  background: rgb(62, 40, 83);
+  border: 0;
+  transition: background-color 0.2s;
+}
+
+form div button:hover {
+  background: rgb(45, 26, 61);
+}
